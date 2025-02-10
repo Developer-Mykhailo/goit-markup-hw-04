@@ -29,6 +29,7 @@ body {
 .header-list,
 .features-list,
 .team-list,
+.social-list,
 .porfolio-list {
   list-style-type: none;
 }
@@ -86,6 +87,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover {
@@ -133,6 +135,12 @@ body {
 
 .hero {
   background-color: #2e2f42;
+  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   padding: 188px 0;
 }
 
@@ -160,6 +168,7 @@ body {
   letter-spacing: 0.04em;
   color: #fff;
   cursor: pointer;
+  transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -170,10 +179,20 @@ body {
 .features-list {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .features-item {
-  width: calc((100% - 72px) / 4);
+  max-width: 264px;
+}
+
+.icon-box {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  padding: 24px 100px;
+  margin-bottom: 8px;
 }
 
 .features-title {
@@ -239,6 +258,28 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.social-item {
+  display: flex;
+}
+
+.social-icon {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-item .social-icon:hover {
+  background-color: #404bbf;
+  scale: 1.1;
 }
 
 /* porfolio */
@@ -249,6 +290,36 @@ body {
   gap: 24px;
   row-gap: 48px;
   justify-content: center;
+}
+
+.porfolio-item:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  width: 100%;
+  height: 100%;
+  background: #4d5ae5;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.porfolio-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .portfolio-item-box {
@@ -279,8 +350,13 @@ body {
   padding: 100px 0;
 }
 
+.footer-container {
+  display: flex;
+}
+
 .footer-content {
   max-width: 264px;
+  margin-right: 120px;
 }
 
 .footer-content .logo {
@@ -293,4 +369,18 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+}
+
+.footer-socsial-subtitle {
+  display: inline-block;
+  color: #f4f4fd;
+  margin-bottom: 16px;
+}
+
+.footer-social-list .social-list {
+  gap: 16px;
+}
+
+.footer-social-list .social-icon:hover {
+  background-color: #31d0aa;
 }
