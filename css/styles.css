@@ -272,13 +272,12 @@ body {
 }
 
 .social-icon {
-  background-color: #4d5ae5;
-  border-radius: 50%;
+  fill: #4d5ae5;
   transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-item .social-icon:hover {
-  background-color: #404bbf;
+  fill: #404bbf;
   scale: 1.1;
 }
 
@@ -382,5 +381,6 @@ body {
 }
 
 .footer-social-list .social-icon:hover {
-  background-color: #31d0aa;
+  fill: #31d0aa;
+  scale: 1.1;
 }
