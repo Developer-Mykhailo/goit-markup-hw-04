@@ -38,6 +38,7 @@ body {
 /* header */
 
 .header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -120,6 +121,8 @@ body {
 /* hero */
 
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -157,12 +160,11 @@ body {
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
-  transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
-  background: #404bbf;
+.hero-btn:hover {
+  background-color: #404bbf;
 }
 
 /* features */
@@ -271,7 +273,7 @@ body {
 
 .social-icon {
   fill: #4d5ae5;
-  transition: all 205ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover {
