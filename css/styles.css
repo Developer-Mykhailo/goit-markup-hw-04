@@ -64,7 +64,6 @@ body {
 }
 
 .header-link {
-  position: relative;
   display: inline-block;
   padding: 24px 0;
   font-weight: 500;
@@ -73,13 +72,13 @@ body {
   color: #2e2f42;
 }
 
-.header-link:hover,
-.header-link:active {
+.current {
+  position: relative;
   color: var(--color-dark-blue);
 }
 
-.header-link:hover::after,
-.header-link:active::after {
+.current:hover::after,
+.current:focus::after {
   content: "";
   position: absolute;
   left: 0;
@@ -411,7 +410,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  color: var(--color-white);
+  color: #fff;
 }
 
 .footer-social-list {
