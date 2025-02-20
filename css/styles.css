@@ -58,36 +58,6 @@ body {
   align-items: center;
 }
 
-.header-list {
-  width: 261px;
-  gap: 40px;
-}
-
-.header-link {
-  display: block;
-  padding: 24px 0;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link.current {
-  position: relative;
-}
-
-.header-link.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  background: var(--color-dark-blue);
-}
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -100,6 +70,41 @@ body {
 
 .header-nav .logo {
   margin-right: 76px;
+}
+
+.header-list {
+  width: 261px;
+  gap: 40px;
+}
+
+.header-link {
+  position: relative;
+  display: block;
+  padding: 24px 0;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background: var(--color-dark-blue);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link:hover::after,
+.header-link:focus::after,
+.header-link.current::after {
+  opacity: 1;
 }
 
 .logo-accent {
